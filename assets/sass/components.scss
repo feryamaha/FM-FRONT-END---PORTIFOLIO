@@ -1,0 +1,207 @@
+@use 'variables' as vars;
+
+// Estilos de componentes
+
+header .container {
+    width: 80%;
+}
+
+header {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 105px;
+    justify-content: center;
+    align-items: center;
+    background: vars.$black;
+}
+
+header .box-content-header {
+    display: flex;
+    padding: 5px 0px 5px 0px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.box-content-header .logo-header,
+.box-content-header .logo-header img {
+    width: 130px;
+}
+
+.box-content-header nav ul {
+    display: flex;
+    height: 61px;
+    padding: 0 32px;
+    justify-content: center;
+    align-items: center;
+    gap: 12%;
+    list-style-type: none
+}
+
+.box-content-header nav ul li a {
+    width: 100%;
+    color: #FFF;
+    text-align: center;
+    font-family: "Joti One";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+}
+
+// banner1
+
+.banner1 .container {
+    width: 100%;
+}
+
+.banner1 {
+    width: 100%;
+    /*height: 80vh;*/
+    background-image: url(/assets/img/line-about\ 2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.banner1 .box-content-banner1 {
+    /*position: relative;*/
+    width: 100%;
+    margin: 0 auto;
+    /*background: blue;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 375px;
+
+    transform: translateZ(0);
+
+}
+
+.banner1 .box-content-banner1 h1 {
+    text-align: center;
+    display: flex;
+    width: 350px;
+    color: #72D6FA;
+    font-family: "Joti One";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 2rem;
+}
+
+.banner1 .box-content-banner1 p {
+    color: #FFF;
+    text-align: center;
+    font-family: "Joti One";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+// banner2
+
+.banner2 .container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.banner2 {
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    background-image: url(/assets/img/ilustra-desktop.svg);
+    background-position: center;
+    top: 180px;
+}
+
+// banner3 - about
+
+.banner3-about .container {
+    margin-top: 300px;
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.box-content-banner3 {
+    position: relative;
+    width: 50%;
+    height: 580px;
+    padding-left: 2%;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.box-content-banner3 h1 {
+    color: #FFF;
+    font-family: "Joti One";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 2rem;
+}
+
+.box-content-banner3 h1 span {
+    color: #284BFF;
+}
+
+
+.box-content-banner3 h3 {
+    color: #284BFF;
+    font-family: "Joti One";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 5rem;
+}
+
+.box-content-banner3 p {
+    color: #FFF;
+    font-family: "Joti One";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#vetor-social {
+    margin-bottom: 5rem;
+}
+
+.box-content-banner3 .box-social {
+    display: flex;
+    width: 40%;
+    gap: 5%;
+    height: 50px;
+    margin-top: -3rem;
+    margin-left: 8.85rem;
+}
+
+
+
+
+
+
+
+// Responsivo 
+@media (max-width:768px) {
+
+    .box-content-header .logo-header,
+    .box-content-header .logo-header img {
+        display: none;
+    }
+
+    header .box-content-header {
+        justify-content: center;
+    }
+}
