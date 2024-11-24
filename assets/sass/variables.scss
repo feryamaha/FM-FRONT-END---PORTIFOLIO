@@ -1,10 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Joti+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Space+Grotesk:wght@300..700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Itim&family=Joti+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Grotesk:wght@300..700&display=swap');
 
 // Variáveis de cores
+
+$background: #131219fc;
+
 $black: #000000;
 $neutral: #404040;
 $white: #FFFFFF;
+$blue-: #284BFF;
+$blue-neutral: #0000ff;
 
 $gray-100: #f4f4f5;
 $gray-200: #e4e4e7;
@@ -12,14 +17,6 @@ $gray-300: #d4d4d8;
 $gray-500: #71717a;
 $gray-800: #27272a;
 $gray-900: #1a1a1a;
-
-// inspeção 
-$green-: green;
-$red-: red;
-$blue-: blue;
-$violet-: blueviolet;
-$orangered-: orangered;
-$orange-: orange;
 
 // Breakpoints mobile
 $breakpoint-275: 275px;

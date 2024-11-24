@@ -1,206 +1,319 @@
 @use 'variables' as vars;
 
-// Estilos de componentes
+@mixin font-joti {
+    font-family: 'Joti One', sans-serif;
+}
 
+@mixin font-itim {
+    font-family: 'Itim', sans-serif;
+}
+
+// Estilos de componentes
 header .container {
-    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1440px;
+    height: 8.6rem;
+    margin: 0 auto;
 }
 
 header {
-    position: fixed;
     display: flex;
-    width: 100%;
-    height: 105px;
-    justify-content: center;
+    height: 5.6rem;
+    padding: 3.2rem;
+    justify-content: space-between;
     align-items: center;
     background: vars.$black;
-    z-index: 3;
 }
 
-header .box-content-header {
+.box-content-header {
     display: flex;
-    padding: 5px 0px 5px 0px;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.box-content-header .logo-header {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 12rem;
+    padding: 5px;
+}
+
+.box-content-header .logo-header img {
+    width: 100%;
+}
+
+nav ul {
+    width: 30rem;
+    display: flex;
+    padding: 12px;
     justify-content: space-between;
     align-items: center;
 }
 
-.box-content-header .logo-header,
-.box-content-header .logo-header img {
-    width: 130px;
-}
-
-.box-content-header nav ul {
-    display: flex;
-    height: 61px;
-    padding: 0 32px;
-    justify-content: center;
-    align-items: center;
-    gap: 12%;
-    list-style-type: none
-}
-
-.box-content-header nav ul li a {
-    width: 100%;
-    color: #FFF;
-    text-align: center;
-    font-family: "Joti One";
-    font-size: 24px;
+nav ul li a {
+    color: vars.$white;
+    font-family: Itim;
+    font-size: 2.1rem;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 400;
     line-height: normal;
-
 }
 
-// banner1
+@media (max-width:768px) {
+    header {
+        padding: 0;
+    }
+
+    .box-content-header {
+        justify-content: center; // Garantir que os itens sejam espaçados
+    }
+
+    .box-content-header .logo-header {
+        display: none;
+    }
+
+    nav ul {
+        margin: 0 auto;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
 
 .banner1 .container {
-    display: flex;
-    position: relative;
     width: 100%;
     height: 80vh;
-    top: 105px;
-    padding: 1%;
-    flex-direction: column;
-
-}
-
-#background-banner1 {
-    width: 100%;
-    margin-top: 50px;
-}
-
-.banner1 .box-content-banner1 {
-    width: 100%;
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-
 }
 
-.banner1 .box-content-banner1 h1 {
+.banner1 .container img {
+    z-index: -1;
+    width: 100%;
+    position: relative;
+    top: 40%;
+}
+
+.box-content-banner1 {
     text-align: center;
-    display: flex;
-    width: 350px;
-    color: #72D6FA;
+    align-content: center;
+}
+
+.box-content-banner1 h1 {
+    color: vars.$blue-;
+    text-align: center;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    -webkit-text-stroke-width: 1;
+    -webkit-text-stroke-color: #000;
+    font-family: "Joti One";
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.box-content-banner1 p {
+    color: vars.$white;
+    text-align: center;
     font-family: "Joti One";
     font-size: 48px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    margin-bottom: 2rem;
 }
-
-.banner1 .box-content-banner1 p {
-    color: #FFF;
-    text-align: center;
-    font-family: "Joti One";
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-}
-
-// banner2
 
 .banner2 .container {
     width: 100%;
     margin: 0 auto;
 }
 
-.banner2 {
-    margin: 0 auto;
-    position: relative;
-    width: 100%;
-    height: 80vh;
-    top: 120px;
+@media (max-width:1200px) {
+    .banner1 .container {
+        height: 50vh;
+    }
+
+    .box-content-banner1 h1 {
+        font-size: 32px;
+    }
+
+    .box-content-banner1 p {
+        font-size: 24px;
+    }
 }
 
-// banner3 - about
-
-.banner3-about .container {
-    margin-top: 300px;
+.banner3-about {
     width: 100%;
     height: 80vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    margin: 0 auto;
+}
+
+.banner3-about .container {
+    /*width: 100%;*/
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+#background-profile {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 80%;
+    height: auto;
 }
 
 .box-content-banner3 {
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 50%;
-    height: 580px;
-    padding-left: 2%;
-    align-items: flex-start;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    padding-left: 3.2rem;
+    margin: auto 0;
 }
 
 .box-content-banner3 h1 {
-    color: #FFF;
-    font-family: "Joti One";
-    font-size: 48px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    margin-bottom: 2rem;
+    color: vars.$white;
+    font-size: 64px;
 }
 
 .box-content-banner3 h1 span {
-    color: #284BFF;
+    color: vars.$blue-;
 }
 
-
 .box-content-banner3 h3 {
-    color: #284BFF;
-    font-family: "Joti One";
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    margin-bottom: 5rem;
+    color: vars.$blue-;
+    font-size: 32px;
 }
 
 .box-content-banner3 p {
-    color: #FFF;
-    font-family: "Joti One";
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-}
-
-#vetor-social {
-    margin-bottom: 5rem;
+    color: vars.$white;
+    font-size: 24px;
 }
 
 .box-content-banner3 .box-social {
+    position: relative;
+    top: -4rem;
+    left: 10rem;
+
     display: flex;
-    width: 40%;
-    gap: 5%;
-    height: 50px;
-    margin-top: -3rem;
-    margin-left: 8.85rem;
+    width: 20rem;
+    height: 6rem;
+    padding: .35rem;
+    justify-content: space-between;
 }
 
 
 
+// Scroller
 
+.scroller {
+    margin-bottom: 1%;
+    text-align: center;
+    overflow: hidden; // Adicionar overflow: hidden para garantir o comportamento correto
+}
 
+.scroller__inner {
+    height: 5.6rem;
+    padding-block: 0.5rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    text-align: center;
+}
 
+.scroller[data-animated="true"] .scroller__inner {
+    width: max-content;
+    flex-wrap: nowrap;
+    animation: scroll var(--_animation-duration, 20s) var(--_animation-direction, forwards) linear infinite;
+}
 
-// Responsivo 
-@media (max-width:768px) {
+.scroller[data-direction="right"] {
+    --_animation-direction: reverse;
+}
 
-    .box-content-header .logo-header,
-    .box-content-header .logo-header img {
-        display: none;
+.scroller[data-direction="left"] {
+    --_animation-direction: forwards;
+}
+
+.scroller[data-speed="fast"] {
+    --_animation-duration: 20s;
+}
+
+.scroller[data-speed="slow"] {
+    --_animation-duration: 60s;
+}
+
+@keyframes scroll {
+    to {
+        transform: translateX(calc(-100% - 0.5rem)); // Corrigir a direção da animação
+    }
+}
+
+#img-log {
+    opacity: 20%;
+    animation: scrollAnimation 10s linear infinite;
+
+    /* Adjust duration and timing as needed */
+}
+
+@keyframes scrollAnimation {
+    0% {
+        transform: translateX(0);
     }
 
-    header .box-content-header {
-        justify-content: center;
+    100% {
+        transform: translateX(-100%);
+        /* Adjust the translation value as needed */
     }
+}
+
+// Scroller Snap
+.scroll-container,
+.scroll-area {
+    width: 100%;
+    height: 600px;
+    font-size: 60px;
+}
+
+.scroll-container {
+    overflow: none;
+    scroll-snap-type: y mandatory;
+}
+
+.content-scroll-area {
+    height: 300px;
+    margin: 0 auto;
+}
+
+.scroll-area {
+    scroll-snap-align: start;
+}
+
+.scroll-area img {
+    height: 100%;
+}
+
+.scroll-container,
+.scroll-area {
+    margin: 0 auto;
+}
+
+.scroll-area {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    color: white;
+    margin-bottom: 5rem;
+    margin-top: 5rem;
+}
+
+.scroll-area:nth-of-type(1) {
+    height: auto;
+}
+
+.scroll-area:nth-of-type(2) {
+    height: auto;
 }

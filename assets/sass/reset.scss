@@ -1,5 +1,17 @@
 @use 'variables' as vars;
 
+// Importar as fontes do Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Joti+One&family=Itim&display=swap');
+
+// Mixins para as Fontes
+@mixin font-joti {
+    font-family: 'Joti One', sans-serif;
+}
+
+@mixin font-itim {
+    font-family: 'Itim', sans-serif;
+}
+
 // Reset CSS
 * {
     margin: 0px;
@@ -8,11 +20,45 @@
     -webkit-font-smoothing: antialiased;
 }
 
+ul {
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+}
+
+
 html {
     font-size: 62.5%;
-    width: 1440px;
     width: 100%;
-    height: 4591px;
-    font-family: 'Joti One';
-    background: rgba(19, 18, 25, 0.99);
+    height: 100%;
+}
+
+body {
+    background: vars.$background;
+}
+
+// Aplicar os mixins nas tags apropriadas
+p,
+a {
+    @include font-itim;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+h1,
+h2,
+h3 {
+    @include font-joti;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.container {
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 15px;
 }
