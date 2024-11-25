@@ -42,3 +42,35 @@
         animateInner2();
     }
 })();
+
+// banner3
+const h1Element = $0;
+const parentElement = h1Element.parentElement;
+const imageElement = parentElement.querySelector('img'); // Assuming the image is a direct child of the parent
+
+if (!imageElement) {
+    // Search for the image within all descendants of the parent element
+    const allDescendants = parentElement.querySelectorAll('*');
+    for (const descendant of allDescendants) {
+        if (descendant.tagName.toLowerCase() === 'img') {
+            imageElement = descendant;
+            break;
+        }
+    }
+
+    if (!imageElement) {
+        throw new Error('Image element not found within the parent element or its descendants.');
+    }
+}
+
+const data = {
+    imageSrc: imageElement.src,
+    cssRules: Array.from(document.styleSheets)
+        .flatMap(sheet => (sheet.cssRules || []))
+        .filter(rule => rule.selectorText && rule.selectorText.includes(imageElement.tagName.toLowerCase()))
+        .map(rule => ({
+            selectorText: rule.selectorText,
+            cssText: rule.cssText,
+            media: rule.media && rule.media.mediaText
+        }))
+};
