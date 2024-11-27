@@ -43,75 +43,10 @@
     }
 })();
 
-// banner3
-const h1Element = $0;
-const parentElement = h1Element.parentElement;
-const imageElement = parentElement.querySelector('img'); // Assuming the image is a direct child of the parent
+``
+const cursor = document.querySelector('.cursor-mouse');
 
-if (!imageElement) {
-    // Search for the image within all descendants of the parent element
-    const allDescendants = parentElement.querySelectorAll('*');
-    for (const descendant of allDescendants) {
-        if (descendant.tagName.toLowerCase() === 'img') {
-            imageElement = descendant;
-            break;
-        }
-    }
-
-    if (!imageElement) {
-        throw new Error('Image element not found within the parent element or its descendants.');
-    }
-}
-
-const data = {
-    imageSrc: imageElement.src,
-    cssRules: Array.from(document.styleSheets)
-        .flatMap(sheet => (sheet.cssRules || []))
-        .filter(rule => rule.selectorText && rule.selectorText.includes(imageElement.tagName.toLowerCase()))
-        .map(rule => ({
-            selectorText: rule.selectorText,
-            cssText: rule.cssText,
-            media: rule.media && rule.media.mediaText
-        }))
-};
-
-
-document.addEventListener('DOMContentLoaded', function () {
-    const targetElement = document.querySelector('.box-content-banner1 p');
-    const originalText = targetElement.textContent;
-    targetElement.textContent = ''; // Clear the original text
-
-    const textParts = [
-        { text: originalText, id: 'typing-text', newLine: false }
-    ];
-
-    let partIndex = 0;
-    let charIndex = 0;
-    let typingDelay = 75; // Adjust typing speed here
-    let currentSpan;
-
-    function typeNextPart() {
-        if (partIndex < textParts.length) {
-            const part = textParts[partIndex];
-            if (!currentSpan || charIndex === 0) {
-                currentSpan = document.createElement('span');
-                currentSpan.id = part.id;
-                targetElement.appendChild(currentSpan);
-                if (part.newLine && partIndex !== 0) {
-                    targetElement.appendChild(document.createElement('br'));
-                }
-            }
-
-            currentSpan.textContent += part.text[charIndex];
-            charIndex++;
-            if (charIndex === part.text.length) {
-                partIndex++;
-                charIndex = 0;
-                currentSpan = null;
-            }
-            setTimeout(typeNextPart, typingDelay);
-        }
-    }
-
-    typeNextPart();
+document.addEventListener('mousemove', (e) => {
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top = e.clientY + 'px';
 });
