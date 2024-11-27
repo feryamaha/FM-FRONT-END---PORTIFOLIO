@@ -30,7 +30,9 @@ header {
     padding: 1.6rem;
     height: 80px;
     box-sizing: border-box;
-    box-shadow: 1px 2px 3px vars.$neutral
+    /* box-shadow: 2px 2px .8px vars.$neutral;*/
+    box-shadow: 0px 20px 40px 10px #000;
+    background-image: radial-gradient(circle 815px at 23.4% -21.8%, rgba(9, 29, 85, 1) 0.2%, rgba(0, 0, 0, 1) 100.2%);
 }
 
 .box-content-header {
@@ -381,7 +383,7 @@ nav ul li a:hover {
 
 .content-projetos p {
     text-align: center;
-    width: 20rem;
+    width: auto;
     font-size: 1.4rem;
     color: vars.$white;
     letter-spacing: .02rem;
@@ -411,16 +413,16 @@ footer .container {
     max-width: none;
     height: 150px;
     margin: 0;
-    background: vars.$black;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 0 15px;
-    border-top: 1px solid vars.$blue-100
+    box-shadow: 0 0 50px 15px black;
+    background-image: radial-gradient(circle 815px at 23.4% -21.8%, rgba(9, 29, 85, 1) 0.2%, rgba(0, 0, 0, 1) 100.2%);
 }
 
 .wrapper-social-footer p {
-    color: vars.$gray-500;
+    color: vars.$blue-100;
     font-size: 1.4rem
 }
 
