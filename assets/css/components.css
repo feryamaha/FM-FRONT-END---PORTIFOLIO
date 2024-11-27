@@ -543,6 +543,16 @@ footer .container {
   }
 }
 @media (max-width: 600px) {
+  .box-content-banner1 {
+    margin-top: 5rem;
+  }
+  .banner2 .container img {
+    margin-top: -30rem;
+    opacity: 30%;
+  }
+  .scroller-wrapper {
+    margin-bottom: 5rem;
+  }
   #background-profile img {
     height: 80%;
   }

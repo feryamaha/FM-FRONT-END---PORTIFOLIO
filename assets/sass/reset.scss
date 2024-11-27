@@ -37,9 +37,10 @@ html {
 
 body {
     background: vars.$background;
-    cursor: none;
+    /*cursor: none;*/
 }
 
+/*
 .cursor-mouse {
     display: block;
     width: 30px;
@@ -47,15 +48,15 @@ body {
     border-radius: 50%;
     border: 2px solid red;
     position: fixed;
-    /* Fixed positioning to follow the mouse */
+
     transform: translate(-50%, -50%);
     pointer-events: none;
-    /* Prevent cursor from interfering with interactions */
+ 
     z-index: 9999;
-    /* Ensure it's on top */
-}
 
-// Aplicar os mixins nas tags apropriadas
+}*/
+
+
 p,
 a {
     @include font-itim;

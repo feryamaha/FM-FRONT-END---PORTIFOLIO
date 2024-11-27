@@ -43,10 +43,10 @@
     }
 })();
 
-``
-const cursor = document.querySelector('.cursor-mouse');
 
-document.addEventListener('mousemove', (e) => {
-    cursor.style.left = e.clientX + 'px';
-    cursor.style.top = e.clientY + 'px';
-});
+//const cursor = document.querySelector('.cursor-mouse');
+
+//document.addEventListener('mousemove', (e) => {
+//cursor.style.left = e.clientX + 'px';
+//cursor.style.top = e.clientY + 'px';
+//});
