@@ -11,20 +11,39 @@
 // Estilos de componentes
 header .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    width: 1440px;
-    height: 8.6rem;
+    width: 90%;
+    /* Adjust width as needed */
+    max-width: 1440px;
+    /* Limit maximum width */
     margin: 0 auto;
+    /* Center the container */
 }
 
 header {
+
+    position: fixed;
+    /* Fix the header to the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* Ensure header spans full width */
+    z-index: 1000;
+    /* Ensure header is above other content */
     display: flex;
-    height: 5.6rem;
-    padding: 3.2rem;
     justify-content: space-between;
     align-items: center;
-    background: vars.$black;
+    padding: 1.6rem;
+    /* Reduced padding for content space */
+    height: 80px;
+    /* Fixed height in pixels */
+    background-attachment: fixed;
+    /* For parallax effect */
+    box-sizing: border-box;
+    /* Include padding in total height */
+    background-color: vars.$black;
+    /* Add a transition for smooth animation */
 }
 
 .box-content-header {
@@ -32,6 +51,7 @@ header {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+
 }
 
 .box-content-header .logo-header {
@@ -52,6 +72,7 @@ nav ul {
     padding: 12px;
     justify-content: space-between;
     align-items: center;
+
 }
 
 nav ul li a {
@@ -63,22 +84,36 @@ nav ul li a {
     line-height: normal;
 }
 
+nav ul li a:hover {
+    color: vars.$neutral;
+    border-bottom: 1px solid vars.$blue-;
+}
+
+// banner1
 .banner1 .container {
+    display: flex;
     width: 100%;
-    height: 80vh;
+    height: 90vh;
     margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
 }
 
 .banner1 .container img {
     z-index: -1;
     width: 100%;
     position: relative;
-    top: 40%;
+    top: 25%;
 }
 
 .box-content-banner1 {
     text-align: center;
     align-content: center;
+
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+
 }
 
 .box-content-banner1 h1 {
@@ -92,6 +127,12 @@ nav ul li a {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    margin-bottom: 2.5rem;
+}
+
+.box-content-banner1 h1:hover {
+    color: vars.$neutral;
+    text-shadow: .1px .8px vars.$blue-;
 }
 
 .box-content-banner1 p {
@@ -104,13 +145,19 @@ nav ul li a {
     line-height: normal;
 }
 
+.box-content-banner1 p:hover {
+    color: vars.$blue-;
+    text-shadow: .1px .8px vars.$white;
+}
+
+//banner2
 .banner2 .container {
     width: 100%;
     margin: 0 auto;
+    margin-bottom: 3rem;
 }
 
 // banner3-about
-
 .banner3-about {
     width: 100%;
     height: 80vh;
@@ -146,10 +193,29 @@ nav ul li a {
     height: 100%;
 }
 
+#background-profile img:hover {
+    cursor: pointer;
+    border-top: 1px solid vars.$neutral;
+    border-right: 1px solid vars.$neutral;
+    border-bottom: 1px solid vars.$blue-;
+    border-left: 1px solid vars.$blue-;
+    border-bottom-left-radius: 15rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
 .box-content-banner3 h1 {
     color: vars.$white;
     font-size: 64px;
 }
+
+.box-content-banner3 h1:hover {
+    color: vars.$white;
+    font-size: 64px;
+    color: vars.$neutral;
+    text-shadow: 0.5px 1px vars.$blue-;
+}
+
 
 .box-content-banner3 h1 span {
     color: vars.$blue-;
@@ -158,6 +224,11 @@ nav ul li a {
 .box-content-banner3 h3 {
     color: vars.$blue-;
     font-size: 32px;
+}
+
+.box-content-banner3 h3:hover {
+    color: vars.$white;
+    text-shadow: 0.5px 1px vars.$blue-;
 }
 
 .box-content-banner3 p {
@@ -174,6 +245,19 @@ nav ul li a {
     height: 4rem;
     padding: .35rem;
     justify-content: space-between;
+}
+
+.box-content-banner3 .box-social img:hover {
+
+    cursor: pointer;
+    /* filter: contrast(175%) brightness(3%);*/
+    border-top: 1px solid vars.$blue-;
+    border-left: 1px solid vars.$blue-;
+    border-bottom: 1px solid vars.$neutral;
+    border-right: 1px solid vars.$neutral;
+    border-radius: .8rem;
+    transform: rotate(45deg);
+
 }
 
 // Scroller
@@ -256,6 +340,11 @@ nav ul li a {
     border-top: 1px solid vars.$blue-;
 }
 
+.projetos .container h1:hover {
+    color: vars.$neutral;
+    text-shadow: 2px 2px vars.$blue-;
+}
+
 .grid-content-projetos {
     display: flex;
     margin-top: 2rem;
@@ -271,7 +360,6 @@ nav ul li a {
     display: flex;
     width: 25rem;
     height: 35rem;
-
     text-align: center;
     flex-direction: column;
     justify-content: space-between;
@@ -302,20 +390,37 @@ nav ul li a {
 }
 
 .content-projetos a {
+    width: 10rem;
+    margin: 0 auto;
     text-decoration: none;
     color: vars.$orangered;
     font-size: 1.8rem;
     cursor: pointer;
 }
 
+.content-projetos a:hover {
+    color: vars.$neutral;
+    border-bottom: 1px solid vars.$blue-;
+}
+
+//footer 
+footer {
+    width: 100%;
+}
+
 footer .container {
     width: 100%;
+    max-width: none;
+    /* Remove the max-width restriction */
     height: auto;
-    margin: 0 auto;
+    margin: 0;
+    /* Remove default margins */
     background: vars.$black;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 0 15px;
+    /* Add padding for content spacing */
 }
 
 .wrapper-social-footer p {
@@ -354,7 +459,9 @@ footer .container {
 
 .wrapper-social-footer .box-social img:hover {
     cursor: pointer;
-    color: vars.$blue-;
+    transform: rotate(45deg);
+    border: 1px solid vars.$blue-;
+    border-radius: .8rem;
 }
 
 .box-content-creditos {
@@ -367,15 +474,26 @@ footer .container {
 }
 
 .box-content-creditos .creditos {
+    width: 20rem;
     display: flex;
     padding: 5px 0px;
+    justify-content: space-evenly;
     align-items: center;
     gap: 12px;
+    cursor: pointer;
+}
+
+.box-content-creditos .creditos:hover {
+    border-top: 1px solid vars.$blue-;
+    border-bottom: 1px solid vars.$blue-;
+    cursor: pointer;
 }
 
 .box-content-creditos img {
     width: 8rem;
 }
+
+
 
 .box-content-creditos p {
     color: vars.$gray-500;
@@ -386,10 +504,6 @@ footer .container {
     color: vars.$gray-500;
     font-size: 1.4rem;
 }
-
-
-
-
 
 // breakpoint //
 @media (max-width:1200px) {
@@ -425,6 +539,11 @@ footer .container {
         align-items: center;
     }
 
+    .box-content-banner1 h1 {
+        margin-top: 2.5rem;
+        margin-bottom: 2.5rem;
+    }
+
     .box-content-banner3 {
         padding: 1%;
         width: 100%;
@@ -432,11 +551,11 @@ footer .container {
     }
 
     .box-content-banner3 h1 {
-        font-size: 48px;
+        font-size: 4rem;
     }
 
     .box-content-banner3 h3 {
-        font-size: 24px;
+        font-size: 1.8rem;
     }
 
     .box-content-banner3 p {
@@ -454,7 +573,6 @@ footer .container {
     .banner3-about {
         margin-bottom: 10rem;
     }
-
 }
 
 @media (max-width:600px) {
@@ -463,7 +581,7 @@ footer .container {
     }
 
     .box-content-banner3 p {
-        font-size: 16px;
+        font-size: 1.6rem;
     }
 
     .banner3-about {
@@ -472,6 +590,11 @@ footer .container {
 
     .projetos .container h1 {
         border-top: none;
+        font-size: 4.8rem;
+    }
+
+    .wrapper-social-footer .box-social {
+        width: 15rem;
     }
 
     .wrapper-social-footer p,
@@ -482,8 +605,13 @@ footer .container {
 
     .box-content-creditos p {
         text-align: center;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
+
+    /*
+    .box-content-creditos p span {
+        display: none;
+    }*/
 
     .box-content-creditos {
         height: 8rem;

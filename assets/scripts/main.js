@@ -74,3 +74,44 @@ const data = {
             media: rule.media && rule.media.mediaText
         }))
 };
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const targetElement = document.querySelector('.box-content-banner1 p');
+    const originalText = targetElement.textContent;
+    targetElement.textContent = ''; // Clear the original text
+
+    const textParts = [
+        { text: originalText, id: 'typing-text', newLine: false }
+    ];
+
+    let partIndex = 0;
+    let charIndex = 0;
+    let typingDelay = 75; // Adjust typing speed here
+    let currentSpan;
+
+    function typeNextPart() {
+        if (partIndex < textParts.length) {
+            const part = textParts[partIndex];
+            if (!currentSpan || charIndex === 0) {
+                currentSpan = document.createElement('span');
+                currentSpan.id = part.id;
+                targetElement.appendChild(currentSpan);
+                if (part.newLine && partIndex !== 0) {
+                    targetElement.appendChild(document.createElement('br'));
+                }
+            }
+
+            currentSpan.textContent += part.text[charIndex];
+            charIndex++;
+            if (charIndex === part.text.length) {
+                partIndex++;
+                charIndex = 0;
+                currentSpan = null;
+            }
+            setTimeout(typeNextPart, typingDelay);
+        }
+    }
+
+    typeNextPart();
+});
