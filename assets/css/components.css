@@ -406,7 +406,8 @@ footer .container {
 }
 
 .wrapper-social-footer p {
-  color: #89CFF0;
+  color: #d4d4d8;
+  letter-spacing: 150%;
   font-size: 1.4rem;
 }
 
