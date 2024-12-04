@@ -117,6 +117,12 @@ nav ul {
   padding: 12px;
   justify-content: space-between;
   align-items: center;
+  transition: transform 0.3s ease;
+}
+
+nav ul li:hover {
+  transition: transform 0.3s ease;
+  transform: translateY(-2.5px);
 }
 
 nav ul li a {
@@ -145,6 +151,11 @@ nav ul li a:hover {
   top: 25%;
 }
 
+/*
+.banner1 .container img:hover {
+    transition: transform 0.3s ease;
+    transform: translateY(-2.5px);
+}*/
 .box-content-banner1 {
   text-align: center;
   align-content: center;
@@ -176,6 +187,8 @@ nav ul li a:hover {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  transition: transform 0.3s ease;
+  transform: translateY(-5.5px);
 }
 
 .box-content-banner1 p {
@@ -195,6 +208,8 @@ nav ul li a:hover {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  transition: transform 0.3s ease;
+  transform: translateY(5.5px);
 }
 
 .banner2 .container {
@@ -248,6 +263,8 @@ nav ul li a:hover {
   border-bottom-left-radius: 15rem;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
+  transition: transform 0.3s ease;
+  transform: translateY(-5.5px);
 }
 
 .box-content-banner3 h1 {
@@ -264,6 +281,8 @@ nav ul li a:hover {
   font-size: 64px;
   color: #404040;
   text-shadow: 0.5px 1px #284BFF;
+  transition: transform 0.3s ease;
+  transform: translateY(-5.5px);
 }
 
 .box-content-banner3 h1 span {
@@ -284,6 +303,8 @@ nav ul li a:hover {
 .box-content-banner3 h3:hover {
   color: #FFFFFF;
   text-shadow: 0.5px 1px #284BFF;
+  transition: transform 0.3s ease;
+  transform: translateX(-5.5px);
 }
 
 .box-content-banner3 p {
@@ -304,12 +325,12 @@ nav ul li a:hover {
 
 .box-content-banner3 .box-social img:hover {
   cursor: pointer;
-  border-top: 1px solid #284BFF;
-  border-left: 1px solid #284BFF;
-  border-bottom: 1px solid #404040;
-  border-right: 1px solid #404040;
   border-radius: 0.8rem;
+  transition: transform 0.3s ease;
   transform: rotate(45deg);
+  border: 1px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to bottom, #284BFF, #d4d4d8);
 }
 
 .scroller {
@@ -389,8 +410,11 @@ nav ul li a:hover {
 }
 
 .projetos .container h1:hover {
+  border: none;
   color: #404040;
   text-shadow: 2px 2px #284BFF;
+  transition: transform 0.3s ease;
+  transform: translateY(-5.5px);
 }
 
 .grid-content-projetos {
@@ -413,8 +437,17 @@ nav ul li a:hover {
   justify-content: space-between;
   padding: 3%;
   cursor: pointer;
-  border-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
   background: #000000;
+  border-width: 1px;
+  border-style: solid;
+  border-image: linear-gradient(to bottom, #284BFF, rgba(0, 0, 0, 0)) 1 100%;
+}
+
+.content-projetos:hover {
+  transition: transform 0.3s ease;
+  transform: translateY(-2.5px);
 }
 
 .content-projetos img {
@@ -452,6 +485,8 @@ nav ul li a:hover {
 .content-projetos a:hover {
   color: #404040;
   border-bottom: 1px solid #284BFF;
+  transition: transform 0.3s ease;
+  transform: translateY(5.5px);
 }
 
 footer {
@@ -481,6 +516,8 @@ footer .container {
   cursor: pointer;
   color: #404040;
   border-bottom: 1px solid #284BFF;
+  transition: transform 0.3s ease;
+  transform: translateY(5.5px);
 }
 
 .wrapper-social-footer {
@@ -507,9 +544,13 @@ footer .container {
 
 .wrapper-social-footer .box-social img:hover {
   cursor: pointer;
-  transform: rotate(45deg);
-  border: 1px solid #284BFF;
+  cursor: pointer;
   border-radius: 0.8rem;
+  transition: transform 0.3s ease;
+  transform: rotate(45deg);
+  border: 1px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to top, #284BFF, #d4d4d8);
 }
 
 .box-content-creditos {
@@ -536,6 +577,8 @@ footer .container {
   border-top: 1px solid #284BFF;
   border-bottom: 1px solid #284BFF;
   cursor: pointer;
+  transition: transform 0.3s ease;
+  transform: translateX(5.5px);
 }
 
 .box-content-creditos img {
