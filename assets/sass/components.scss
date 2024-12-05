@@ -30,9 +30,11 @@ header {
     padding: 1.6rem;
     height: 80px;
     box-sizing: border-box;
-    /* box-shadow: 2px 2px .8px vars.$neutral;*/
-    box-shadow: 0px 20px 40px 10px #000;
-    background-image: radial-gradient(circle 815px at 23.4% -21.8%, rgba(9, 29, 85, 1) 0.2%, rgba(0, 0, 0, 1) 100.2%);
+    box-shadow: 0px 5px 20px 5px vars.$black;
+}
+
+header:hover {
+    box-shadow: 0px 5px 20px 5px vars.$blue-;
 }
 
 .box-content-header {
@@ -46,12 +48,17 @@ header {
     display: flex;
     justify-content: left;
     align-items: center;
-    width: 12rem;
-    padding: 5px
+    width: 180px;
+    padding: 5px;
 }
 
 .box-content-header .logo-header img {
     width: 100%;
+}
+
+.box-content-header .logo-header img:hover {
+    transition: transform 0.3s ease;
+    transform: translateY(3.5px);
 }
 
 nav ul {
@@ -65,7 +72,7 @@ nav ul {
 
 nav ul li:hover {
     transition: transform 0.3s ease;
-    transform: translateY(-2.5px);
+    transform: translateY(2.5px);
 }
 
 nav ul li a {
@@ -74,9 +81,8 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: vars.$neutral;
+    color: vars.$gray-500;
     border-bottom: 1px solid vars.$blue-;
-
 }
 
 .banner1 .container {
@@ -95,12 +101,6 @@ nav ul li a:hover {
     top: 25%
 }
 
-/*
-.banner1 .container img:hover {
-    transition: transform 0.3s ease;
-    transform: translateY(-2.5px);
-}*/
-
 .box-content-banner1 {
     text-align: center;
     align-content: center;
@@ -112,13 +112,11 @@ nav ul li a:hover {
 .box-content-banner1 h1 {
     font: normal 400 64px/normal "Joti One";
     color: vars.$blue-;
-
     text-align: center;
     text-shadow: 0 4px 4px rgb(0 0 0 / 0.25);
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #000;
     margin-bottom: 2.5rem;
-
     background: -webkit-linear-gradient(vars.$blue-neutral, vars.$blue-100);
     background: linear-gradient(vars.$blue-neutral, vars.$blue-100);
     -webkit-background-clip: text;
@@ -156,7 +154,6 @@ nav ul li a:hover {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-
     transition: transform 0.3s ease;
     transform: translateY(5.5px);
 }
@@ -166,6 +163,10 @@ nav ul li a:hover {
     margin: 0 auto;
     margin-bottom: 3rem;
     opacity: 70%;
+}
+
+.banner2 .container:hover {
+    opacity: 130%;
 }
 
 .banner3-about {
@@ -212,9 +213,8 @@ nav ul li a:hover {
     border-bottom-left-radius: 15rem;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
-
     transition: transform 0.3s ease;
-    transform: translateY(-5.5px);
+    transform: translateY(-2.5px);
 }
 
 .box-content-banner3 h1 {
@@ -231,7 +231,6 @@ nav ul li a:hover {
     font-size: 64px;
     color: vars.$neutral;
     text-shadow: .5px 1px vars.$blue-;
-
     transition: transform 0.3s ease;
     transform: translateY(-5.5px);
 }
@@ -254,7 +253,6 @@ nav ul li a:hover {
 .box-content-banner3 h3:hover {
     color: vars.$white;
     text-shadow: .5px 1px vars.$blue-;
-
     transition: transform 0.3s ease;
     transform: translateX(-5.5px);
 }
@@ -278,7 +276,6 @@ nav ul li a:hover {
 .box-content-banner3 .box-social img:hover {
     cursor: pointer;
     border-radius: .8rem;
-
     transition: transform 0.3s ease;
     transform: rotate(45deg);
     border: 1px solid;
@@ -325,12 +322,18 @@ nav ul li a:hover {
 
 @keyframes scroll {
     to {
-        transform: translateX(calc(-100% - 0.5rem))
+        transform: translateX(calc(-100% - 0.1rem))
     }
 }
 
 #img-log {
     opacity: 20%;
+    animation: scrollAnimation 10s linear infinite
+}
+
+#img-log:hover {
+    cursor: pointer;
+    opacity: 200%;
     animation: scrollAnimation 10s linear infinite
 }
 
@@ -357,8 +360,6 @@ nav ul li a:hover {
     text-align: center;
     margin-top: 10rem;
     padding-top: 5rem;
-    border-top: 1px solid vars.$blue-;
-
     background: -webkit-linear-gradient(vars.$blue-neutral, vars.$blue-100);
     background: linear-gradient(vars.$blue-neutral, vars.$blue-100);
     -webkit-background-clip: text;
@@ -366,14 +367,9 @@ nav ul li a:hover {
     -webkit-text-fill-color: transparent;
 }
 
-
 .projetos .container h1:hover {
-    border: none;
-    color: vars.$neutral;
-    text-shadow: 2px 2px vars.$blue-;
-
     transition: transform 0.3s ease;
-    transform: translateY(-5.5px);
+    transform: translateX(-5.5px);
 }
 
 .grid-content-projetos {
@@ -395,11 +391,9 @@ nav ul li a:hover {
     flex-direction: column;
     justify-content: space-between;
     padding: 3%;
-    cursor: pointer;
     border-bottom-left-radius: 2rem;
     border-bottom-right-radius: 2rem;
     background: vars.$black;
-
     border-width: 1px;
     border-style: solid;
     border-image:
@@ -415,7 +409,7 @@ nav ul li a:hover {
 }
 
 .content-projetos img {
-    height: 15rem;
+    height: 12rem;
     margin: 0 auto
 }
 
@@ -440,18 +434,17 @@ nav ul li a:hover {
 .content-projetos a {
     width: 10rem;
     margin: 0 auto;
+    padding: 1%;
     text-decoration: none;
     color: vars.$orangered;
     font-size: 1.8rem;
-    cursor: pointer
+    border-radius: 20px;
+    border: 1px solid vars.$blue-;
 }
 
 .content-projetos a:hover {
+    cursor: pointer;
     color: vars.$neutral;
-    border-bottom: 1px solid vars.$blue-;
-
-    transition: transform 0.3s ease;
-    transform: translateY(5.5px);
 }
 
 footer {
@@ -467,8 +460,12 @@ footer .container {
     flex-direction: column;
     justify-content: space-between;
     padding: 0 15px;
-    box-shadow: 0 0 50px 15px black;
-    /* background-image: radial-gradient(circle 815px at 23.4% -21.8%, rgba(9, 29, 85, 1) 0.2%, rgba(0, 0, 0, 1) 100.2%);*/
+    box-shadow: 0 0 50px 15px vars.$black;
+    background-color: vars.$black;
+}
+
+footer .container:hover {
+    box-shadow: 0 0 50px 15px vars.$blue-;
 }
 
 .wrapper-social-footer p {
@@ -481,7 +478,6 @@ footer .container {
     cursor: pointer;
     color: vars.$neutral;
     border-bottom: 1px solid vars.$blue-;
-
     transition: transform 0.3s ease;
     transform: translateY(5.5px);
 }
@@ -512,7 +508,6 @@ footer .container {
     cursor: pointer;
     cursor: pointer;
     border-radius: .8rem;
-
     transition: transform 0.3s ease;
     transform: rotate(45deg);
     border: 1px solid;
@@ -540,17 +535,8 @@ footer .container {
     cursor: pointer
 }
 
-.box-content-creditos .creditos:hover {
-    border-top: 1px solid vars.$blue-;
-    border-bottom: 1px solid vars.$blue-;
-    cursor: pointer;
-
-    transition: transform 0.3s ease;
-    transform: translateX(5.5px);
-}
-
 .box-content-creditos img {
-    width: 8rem
+    width: 12rem;
 }
 
 .box-content-creditos p {

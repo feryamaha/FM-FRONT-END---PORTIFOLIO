@@ -87,9 +87,11 @@ header {
   padding: 1.6rem;
   height: 80px;
   box-sizing: border-box;
-  /* box-shadow: 2px 2px .8px vars.$neutral;*/
-  box-shadow: 0px 20px 40px 10px #000;
-  background-image: radial-gradient(circle 815px at 23.4% -21.8%, rgb(9, 29, 85) 0.2%, rgb(0, 0, 0) 100.2%);
+  box-shadow: 0px 5px 20px 5px #000000;
+}
+
+header:hover {
+  box-shadow: 0px 5px 20px 5px #284BFF;
 }
 
 .box-content-header {
@@ -103,12 +105,17 @@ header {
   display: flex;
   justify-content: left;
   align-items: center;
-  width: 12rem;
+  width: 180px;
   padding: 5px;
 }
 
 .box-content-header .logo-header img {
   width: 100%;
+}
+
+.box-content-header .logo-header img:hover {
+  transition: transform 0.3s ease;
+  transform: translateY(3.5px);
 }
 
 nav ul {
@@ -122,7 +129,7 @@ nav ul {
 
 nav ul li:hover {
   transition: transform 0.3s ease;
-  transform: translateY(-2.5px);
+  transform: translateY(2.5px);
 }
 
 nav ul li a {
@@ -131,7 +138,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #404040;
+  color: #71717a;
   border-bottom: 1px solid #284BFF;
 }
 
@@ -151,11 +158,6 @@ nav ul li a:hover {
   top: 25%;
 }
 
-/*
-.banner1 .container img:hover {
-    transition: transform 0.3s ease;
-    transform: translateY(-2.5px);
-}*/
 .box-content-banner1 {
   text-align: center;
   align-content: center;
@@ -219,6 +221,10 @@ nav ul li a:hover {
   opacity: 70%;
 }
 
+.banner2 .container:hover {
+  opacity: 130%;
+}
+
 .banner3-about {
   width: 100%;
   height: 80vh;
@@ -264,7 +270,7 @@ nav ul li a:hover {
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
   transition: transform 0.3s ease;
-  transform: translateY(-5.5px);
+  transform: translateY(-2.5px);
 }
 
 .box-content-banner3 h1 {
@@ -372,11 +378,17 @@ nav ul li a:hover {
 
 @keyframes scroll {
   to {
-    transform: translateX(calc(-100% - 0.5rem));
+    transform: translateX(calc(-100% - 0.1rem));
   }
 }
 #img-log {
   opacity: 20%;
+  animation: scrollAnimation 10s linear infinite;
+}
+
+#img-log:hover {
+  cursor: pointer;
+  opacity: 200%;
   animation: scrollAnimation 10s linear infinite;
 }
 
@@ -401,7 +413,6 @@ nav ul li a:hover {
   text-align: center;
   margin-top: 10rem;
   padding-top: 5rem;
-  border-top: 1px solid #284BFF;
   background: -webkit-linear-gradient(#0000ff, #89CFF0);
   background: linear-gradient(#0000ff, #89CFF0);
   -webkit-background-clip: text;
@@ -410,11 +421,8 @@ nav ul li a:hover {
 }
 
 .projetos .container h1:hover {
-  border: none;
-  color: #404040;
-  text-shadow: 2px 2px #284BFF;
   transition: transform 0.3s ease;
-  transform: translateY(-5.5px);
+  transform: translateX(-5.5px);
 }
 
 .grid-content-projetos {
@@ -436,7 +444,6 @@ nav ul li a:hover {
   flex-direction: column;
   justify-content: space-between;
   padding: 3%;
-  cursor: pointer;
   border-bottom-left-radius: 2rem;
   border-bottom-right-radius: 2rem;
   background: #000000;
@@ -451,7 +458,7 @@ nav ul li a:hover {
 }
 
 .content-projetos img {
-  height: 15rem;
+  height: 12rem;
   margin: 0 auto;
 }
 
@@ -476,17 +483,17 @@ nav ul li a:hover {
 .content-projetos a {
   width: 10rem;
   margin: 0 auto;
+  padding: 1%;
   text-decoration: none;
   color: #ff4500;
   font-size: 1.8rem;
-  cursor: pointer;
+  border-radius: 20px;
+  border: 1px solid #284BFF;
 }
 
 .content-projetos a:hover {
+  cursor: pointer;
   color: #404040;
-  border-bottom: 1px solid #284BFF;
-  transition: transform 0.3s ease;
-  transform: translateY(5.5px);
 }
 
 footer {
@@ -502,8 +509,12 @@ footer .container {
   flex-direction: column;
   justify-content: space-between;
   padding: 0 15px;
-  box-shadow: 0 0 50px 15px black;
-  /* background-image: radial-gradient(circle 815px at 23.4% -21.8%, rgba(9, 29, 85, 1) 0.2%, rgba(0, 0, 0, 1) 100.2%);*/
+  box-shadow: 0 0 50px 15px #000000;
+  background-color: #000000;
+}
+
+footer .container:hover {
+  box-shadow: 0 0 50px 15px #284BFF;
 }
 
 .wrapper-social-footer p {
@@ -573,16 +584,8 @@ footer .container {
   cursor: pointer;
 }
 
-.box-content-creditos .creditos:hover {
-  border-top: 1px solid #284BFF;
-  border-bottom: 1px solid #284BFF;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-  transform: translateX(5.5px);
-}
-
 .box-content-creditos img {
-  width: 8rem;
+  width: 12rem;
 }
 
 .box-content-creditos p {
