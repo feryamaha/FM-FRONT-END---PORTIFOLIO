@@ -37,24 +37,38 @@ html {
 
 body {
     background: vars.$background;
-    /*cursor: none;*/
+    cursor: none;
 }
 
-/*
-.cursor-mouse {
-    display: block;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    border: 2px solid red;
+.custom-cursor {
     position: fixed;
-
-    transform: translate(-50%, -50%);
+    width: 25px;
+    height: 25px;
+    border: 1px solid #ff0000;
+    background-color: #ff0000;
+    border-radius: 50%;
     pointer-events: none;
- 
+    /* Impedir que o cursor interfira na interação do mouse */
+    transform: translate(-50%, -50%);
+    /* Centralizar o cursor em relação ao ponto do mouse */
+    background-color: transparent;
     z-index: 9999;
+    /* Assegurar que o cursor esteja acima de outros elementos */
+}
 
-}*/
+.trail {
+    position: fixed;
+    width: 15px;
+    height: 15px;
+    border: 1px solid yellow;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    opacity: 0.5;
+    transition: opacity 0.2s ease-out;
+    z-index: 9999;
+}
 
 
 p,

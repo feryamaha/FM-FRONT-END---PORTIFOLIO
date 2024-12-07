@@ -43,10 +43,49 @@
     }
 })();
 
+document.addEventListener("DOMContentLoaded", () => {
+    const dots = document.querySelectorAll(".dot");
+    const colors = ["light-blue", "medium-blue", "dark-blue"]; // Classes de cor
 
-//const cursor = document.querySelector('.cursor-mouse');
+    let currentIndex = 0;
 
-//document.addEventListener('mousemove', (e) => {
-//cursor.style.left = e.clientX + 'px';
-//cursor.style.top = e.clientY + 'px';
-//});
+    setInterval(() => {
+        dots.forEach((dot, index) => {
+            // Remove todas as classes de cor
+            dot.classList.remove(...colors);
+
+            // Adiciona a classe de cor correspondente
+            dot.classList.add(colors[(currentIndex + index) % colors.length]);
+        });
+        currentIndex++;
+    }, 800); // Altere a frequência conforme necessário (500 ms neste exemplo)
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const customCursor = document.createElement("div");
+    customCursor.classList.add("custom-cursor");
+    document.body.appendChild(customCursor);
+
+    let trails = [];
+
+    document.addEventListener("mousemove", (e) => {
+        customCursor.style.top = `${e.clientY}px`;
+        customCursor.style.left = `${e.clientX}px`;
+
+        const trail = document.createElement("div");
+        trail.classList.add("trail");
+        trail.style.top = `${e.clientY}px`;
+        trail.style.left = `${e.clientX}px`;
+        document.body.appendChild(trail);
+        trails.push(trail);
+
+        setTimeout(() => {
+            trail.style.opacity = 0;
+            setTimeout(() => {
+                document.body.removeChild(trail);
+                trails.shift();
+            }, 800); // Tempo para remover o trail
+        }, 300); // Tempo para iniciar o fade-out
+    });
+});
+

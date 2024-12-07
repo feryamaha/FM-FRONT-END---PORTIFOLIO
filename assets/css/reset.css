@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Joti+One&family=Itim&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Joti+One&family=Itim&display=swap");
 * {
@@ -23,24 +24,39 @@ html {
 
 body {
   background: rgba(19, 18, 25, 0.9882352941);
-  /*cursor: none;*/
+  cursor: none;
 }
 
-/*
-.cursor-mouse {
-    display: block;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    border: 2px solid red;
-    position: fixed;
+.custom-cursor {
+  position: fixed;
+  width: 25px;
+  height: 25px;
+  border: 1px solid #ff0000;
+  background-color: #ff0000;
+  border-radius: 50%;
+  pointer-events: none;
+  /* Impedir que o cursor interfira na interação do mouse */
+  transform: translate(-50%, -50%);
+  /* Centralizar o cursor em relação ao ponto do mouse */
+  background-color: transparent;
+  z-index: 9999;
+  /* Assegurar que o cursor esteja acima de outros elementos */
+}
 
-    transform: translate(-50%, -50%);
-    pointer-events: none;
+.trail {
+  position: fixed;
+  width: 15px;
+  height: 15px;
+  border: 1px solid yellow;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  opacity: 0.5;
+  transition: opacity 0.2s ease-out;
+  z-index: 9999;
+}
 
-    z-index: 9999;
-
-}*/
 p,
 a {
   font-family: "Itim", sans-serif;
