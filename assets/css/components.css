@@ -38,25 +38,39 @@ header:hover {
 
 .box-content-header .logo-header {
   display: flex;
-  justify-content: left;
+  justify-content: center;
   align-items: center;
-  width: 180px;
+  width: 200px;
   padding: 0.5%;
-  border: 1px solid red;
+  /*border: 1px solid blue;*/
+  font-size: 32px;
+  background: -webkit-linear-gradient(#0000ff, #89CFF0);
+  background: linear-gradient(#0000ff, #89CFF0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
+/*
+#INICIO {
+    background: -webkit-linear-gradient(vars.$blue-neutral, vars.$blue-100);
+    background: linear-gradient(vars.$blue-neutral, vars.$blue-100);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}*/
+/*
 .box-content-header .logo-header img {
-  width: 90%;
-  filter: brightness(1);
+    width: 90%;
+    filter: brightness(1);
 }
 
 .box-content-header .logo-header img:hover {
-  transition: transform 0.3s ease;
-  transform: translateY(3.5px);
-}
-
+    transition: transform 0.3s ease;
+    transform: translateY(3.5px);
+}*/
 nav ul {
-  width: 30rem;
+  width: 400px;
   display: flex;
   padding: 12px;
   justify-content: space-between;
@@ -195,18 +209,12 @@ nav ul li a:hover {
 
 #background-profile img {
   height: 100%;
+  border-top-left-radius: 30%;
+  border-bottom-right-radius: 30%;
 }
 
 #background-profile img:hover {
-  cursor: pointer;
-  border-top: 1px solid #404040;
-  border-right: 1px solid #404040;
-  border-bottom: 1px solid #284BFF;
-  border-left: 1px solid #284BFF;
-  border-bottom-left-radius: 15rem;
-  border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem;
-  transition: transform 0.3s ease;
+  transition: transform 0.6s ease;
   transform: translateY(-2.5px);
 }
 
@@ -477,7 +485,6 @@ footer {
 footer .container {
   width: 100%;
   max-width: none;
-  /*height: 150px;*/
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -556,6 +563,20 @@ footer .container:hover {
   align-items: center;
   gap: 5%;
   cursor: pointer;
+}
+
+.box-content-creditos .creditos a {
+  font-size: 16px;
+  background: -webkit-linear-gradient(#0000ff, #89CFF0);
+  background: linear-gradient(#0000ff, #89CFF0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.box-content-creditos .creditos a:hover {
+  transition: transform 0.6s ease;
+  transform: translateX(2.5px);
 }
 
 .box-content-creditos img {
@@ -686,11 +707,17 @@ footer .container:hover {
   .banner2 .container img {
     margin-top: 3rem;
   }
+  nav ul li a {
+    font: normal 400 2rem/normal Itim;
+  }
 }
 @media (max-width: 325px) {
   .banner2 .container img {
     margin-top: 3rem;
     opacity: 30%;
+  }
+  nav ul li a {
+    font: normal 400 1.2rem/normal Itim;
   }
 }
 

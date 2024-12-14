@@ -8,14 +8,6 @@
   -webkit-font-smoothing: antialiased;
 }
 
-ul {
-  list-style: none;
-}
-
-nav ul li a {
-  text-decoration: none;
-}
-
 html {
   font-size: 62.5%;
   width: 100%;
@@ -58,11 +50,14 @@ body {
 }
 
 p,
+ul,
 a {
   font-family: "Itim", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  text-decoration: none;
+  list-style: none;
 }
 
 h1,
