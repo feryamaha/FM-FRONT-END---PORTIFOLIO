@@ -50,7 +50,6 @@ header:hover {
     align-items: center;
     width: 200px;
     padding: .5%;
-    /*border: 1px solid blue;*/
     font-size: 32px;
     background: -webkit-linear-gradient(vars.$blue-neutral, vars.$blue-100);
     background: linear-gradient(vars.$blue-neutral, vars.$blue-100);
@@ -133,6 +132,30 @@ nav ul li a:hover {
     transform: translateY(-5.5px);
 }
 
+.box-content-banner1 h2::before {
+    content: '';
+    max-width: 59.9rem;
+    height: 2.2rem;
+    background: url(../img/line-title.png) no-repeat left center;
+    filter: invert(45%);
+    position: absolute;
+    left: 25%;
+    top: 270px;
+    margin: 4.5%;
+    z-index: -1;
+    animation: drawLine 1.75s ease-in forwards
+}
+
+@keyframes drawLine {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
 .box-content-banner1 p {
     font: normal 400 38px/normal "Joti One";
     color: vars.$white;
@@ -195,14 +218,21 @@ nav ul li a:hover {
     height: 70%;
     justify-content: center;
     align-items: center;
+    animation: floatingY 3s ease-in-out infinite;
 }
 
-#background-profile P {
-    font-size: 40px;
-    color: vars.$white;
-    font-weight: 800;
-    position: absolute;
-    bottom: 0
+@keyframes floatingY {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(5px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
 }
 
 #background-profile img {
@@ -287,12 +317,11 @@ nav ul li a:hover {
     color: vars.$white;
     font-size: 2.1rem;
     letter-spacing: 1.2px;
-
 }
 
 .box-content-banner3 .box-social {
     position: relative;
-    top: -3rem;
+    top: -3.5rem;
     left: 10rem;
     display: flex;
     width: 20rem;
@@ -309,6 +338,24 @@ nav ul li a:hover {
     border: 1px solid;
     border-image-slice: 1;
     border-image-source: linear-gradient(to bottom, vars.$blue-, vars.$gray-300);
+}
+
+#vetor-social {
+    animation: floatingX 3s ease-in-out infinite;
+}
+
+@keyframes floatingX {
+    0% {
+        transform: translateX(0px);
+    }
+
+    50% {
+        transform: translateX(15px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
 }
 
 .scroller {
@@ -460,7 +507,7 @@ nav ul li a:hover {
 }
 
 .content-projetos a {
-    width: 10rem;
+    width: 15rem;
     margin: 0 auto;
     padding: 1%;
     text-decoration: none;
@@ -613,6 +660,11 @@ footer .container:hover {
     .box-content-banner1 p {
         font-size: 24px
     }
+
+    .box-content-banner1 h2::before {
+        left: 10%;
+        top: 270px;
+    }
 }
 
 @media (max-width:920px) {
@@ -669,10 +721,6 @@ footer .container:hover {
         margin-bottom: 10rem
     }
 
-    #background-profile img:hover {
-        border: none;
-    }
-
     .wrapper-social-footer {
         flex-direction: column;
     }
@@ -680,6 +728,12 @@ footer .container:hover {
     .wrapper-social-footer p,
     .wrapper-social-footer .box-social {
         margin-top: 1.5%;
+    }
+
+    .box-content-banner1 h2::before {
+        max-width: 55rem;
+        left: -5px;
+        top: 270px;
     }
 
 }
@@ -736,6 +790,12 @@ footer .container:hover {
         justify-content: center;
         flex-wrap: wrap
     }
+
+    .box-content-banner1 h2::before {
+        max-width: 43.5rem;
+        left: 0;
+        top: 320px;
+    }
 }
 
 @media (max-width:475px) {
@@ -749,11 +809,15 @@ footer .container:hover {
         font: normal 400 2rem/normal Itim;
     }
 
+    .box-content-banner1 h2::before {
+        max-width: 40rem;
+    }
+
 }
 
 @media (max-width:325px) {
     .banner2 .container img {
-        margin-top: 3rem;
+        margin-top: 5rem;
         opacity: 30%;
     }
 
