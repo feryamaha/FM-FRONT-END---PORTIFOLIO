@@ -311,8 +311,9 @@ nav ul li a:hover {
   left: 10rem;
   display: flex;
   width: 20rem;
-  height: 4rem;
+  height: 7rem;
   padding: 0.35rem;
+  align-items: center;
   justify-content: space-between;
 }
 
@@ -339,6 +340,40 @@ nav ul li a:hover {
   }
   100% {
     transform: translateX(0px);
+  }
+}
+#log-linkedin,
+#log-instagram,
+.light-blue,
+.dark-blue {
+  animation: floating-log-linkedin 3s ease-in-out infinite;
+}
+
+@keyframes floating-log-linkedin {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+#log-x-twitter,
+.medium-blue {
+  animation: floating-log-x-twitter 3s ease-in-out infinite;
+}
+
+@keyframes floating-log-x-twitter {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0px);
   }
 }
 .scroller {
