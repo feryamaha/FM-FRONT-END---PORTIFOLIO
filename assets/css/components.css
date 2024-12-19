@@ -171,12 +171,20 @@ nav ul li a:hover {
   width: 100%;
   margin: 0 auto;
   margin-bottom: 3rem;
-  opacity: 70%;
+  opacity: 30%;
   margin-top: 20px;
+}
+
+.banner2 img:hover {
+  box-shadow: 2px 2px 2px 2px #284BFF;
 }
 
 .banner2 .container:hover {
   opacity: 130%;
+}
+
+#SOBRE {
+  height: 50px;
 }
 
 .banner3-about {
@@ -376,67 +384,6 @@ nav ul li a:hover {
     transform: translateY(0px);
   }
 }
-.scroller {
-  margin-bottom: 1%;
-  text-align: center;
-  overflow: hidden;
-}
-
-.scroller__inner {
-  height: 5.6rem;
-  padding-block: 0.5rem;
-  display: flex;
-  gap: 1rem;
-  justify-content: space-between;
-  text-align: center;
-}
-
-.scroller[data-animated=true] .scroller__inner {
-  width: max-content;
-  flex-wrap: nowrap;
-  animation: scroll var(--_animation-duration, 20s) var(--_animation-direction, forwards) linear infinite;
-}
-
-.scroller[data-direction=right] {
-  --_animation-direction: reverse ;
-}
-
-.scroller[data-direction=left] {
-  --_animation-direction: forwards ;
-}
-
-.scroller[data-speed=fast] {
-  --_animation-duration: 20s ;
-}
-
-.scroller[data-speed=slow] {
-  --_animation-duration: 60s ;
-}
-
-@keyframes scroll {
-  to {
-    transform: translateX(calc(-100% - 0.1rem));
-  }
-}
-#img-log {
-  opacity: 20%;
-  animation: scrollAnimation 10s linear infinite;
-}
-
-#img-log:hover {
-  cursor: pointer;
-  opacity: 200%;
-  animation: scrollAnimation 10s linear infinite;
-}
-
-@keyframes scrollAnimation {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
 .projetos .container {
   width: 100%;
   height: auto;
@@ -475,12 +422,12 @@ nav ul li a:hover {
 
 .content-projetos {
   display: flex;
-  width: 25rem;
+  width: 30rem;
   height: 35rem;
   text-align: center;
   flex-direction: column;
   justify-content: space-between;
-  padding: 3%;
+  padding: 1.2%;
   border-bottom-left-radius: 2rem;
   border-bottom-right-radius: 2rem;
   background: #000000;
@@ -518,7 +465,7 @@ nav ul li a:hover {
 }
 
 .content-projetos a {
-  width: 15rem;
+  width: 20rem;
   margin: 0 auto;
   padding: 1%;
   text-decoration: none;
@@ -530,6 +477,7 @@ nav ul li a:hover {
 
 .content-projetos a:hover {
   cursor: pointer;
+  border: 1px solid #404040;
   color: #404040;
 }
 
