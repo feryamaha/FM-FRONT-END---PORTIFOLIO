@@ -10,6 +10,7 @@
             content="Frontend Developer, React, JavaScript, HTML, CSS, Portfolio, Web Development, Pixel Perfect">
 
         <title>FM Front-end</title>
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <link rel="stylesheet" href="assets/css/main.css">
     </head>
 
@@ -39,9 +40,9 @@
             <div class="container">
                 <img src="assets/img/line-about2.png" alt="background"
                     id="background-banner1">
-                <div class="box-content-banner1">
+                <div class="box-content-banner1" data-aos="zoom-out-up">
                     <h1>Desenvolvedor <br> Front-end</h1>
-                    <h2> </h2>
+
                     <p>Dou vida ao seu design. <br> Páginas web com precisão em
                         cada elemento.</p>
                 </div>
@@ -49,7 +50,10 @@
         </section>
 
         <section class="banner2">
-            <div class="container">
+            <div class="container" data-aos="fade-down"
+                data-aos-easing="linear"
+                data-aos-delay="300"
+                data-aos-duration="1500">
                 <img src="assets/img/ilustra-desktop.svg" alt="background"
                     id="background-banner2">
             </div>
@@ -57,8 +61,8 @@
         <section id="SOBRE"></section>
         <section class="banner3-about">
             <div class="container">
-                <div class="box-content-banner3">
-                    <!--<h1>Quem sou ...</h1>-->
+                <div class="box-content-banner3" data-aos="fade-up"
+                    data-aos-duration="3000">
                     <h1>Quem sou <span class="dot light-blue">.</span>
                         <span class="dot medium-blue">.</span>
                         <span class="dot dark-blue">.</span></h1>
@@ -86,7 +90,8 @@
                     </p>
                     <div class="wrapper-social">
 
-                        <img src="assets/img/details-social 1.png" alt="vetor"
+                        <img
+                            src="assets/img/details-social 1.png" alt="vetor"
                             id="vetor-social">
 
                         <div class="box-social">
@@ -94,35 +99,43 @@
                                 href="https://www.linkedin.com/in/feryamaha/"
                                 target="_blank"
                                 rel="noopener noreferrer"><img
+                                    data-aos="fade-left"
                                     src="assets/img/icons8-linkedin-50 1.png"
                                     alt="linkedin"></a>
                             <a id="log-x-twitter"
                                 href="https://x.com/_feryamaha"
                                 target="_blank"
                                 rel="noopener noreferrer"><img
+                                    data-aos="fade-up"
                                     src="assets/img/icons8-twitterx-50 1.png"
                                     alt="X"></a>
                             <a id="log-instagram"
                                 href="https://www.instagram.com/fm_frontend?utm_source=qr&igsh=cmFmZ3Uza3NyYXE="
                                 target="_blank"
                                 rel="noopener noreferrer"><img
+                                    data-aos="fade-right"
                                     src="assets/img/icons8-instagram-50 1.png"
                                     alt="instagram"></a>
                         </div>
                     </div>
                 </div>
                 <div id="background-profile">
-                    <img src="assets/img/img-profile5.jpg" alt="img-profile">
+                    <img src="assets/img/img-profile5.jpg" alt="img-profile"
+                        data-aos="fade-down"
+                        data-aos-easing="linear"
+                        data-aos-duration="1500">
                 </div>
             </section>
 
             <section class="projetos" id="PROJETOS">
                 <div class="container">
-                    <h1>Projetos <span class="dot light-blue">.</span>
+                    <h1 data-aos="fade-left">Projetos <span
+                            class="dot light-blue">.</span>
                         <span class="dot medium-blue">.</span>
                         <span class="dot dark-blue">.</span></h1>
                     <div class="grid-content-projetos">
-                        <div class="content-projetos">
+
+                        <div class="content-projetos" data-aos="flip-left">
                             <h2>Projeto confidencial</h2>
                             <p>Projeto freelancer frontend de um website de um
                                 cliente da Auclan Design que
@@ -137,7 +150,7 @@
                             </a>
                         </div>
 
-                        <div class="content-projetos">
+                        <div class="content-projetos" data-aos="flip-left">
                             <h2>Projeto confidencial</h2>
                             <p>Projeto freelancer frontend de um website de um
                                 cliente da Auclan Design que
@@ -152,7 +165,7 @@
                             rel="noopener noreferrer">AUCLAN DESIGN
                         </a>
                     </div>
-                    <div class="content-projetos">
+                    <div class="content-projetos" data-aos="flip-left">
                         <h2>Meu Portifolio</h2>
                         <p>Estilizado com sass compilado com node.js e
                             animações em javascript! </p>
@@ -164,7 +177,7 @@
                             rel="noopener noreferrer">VER PROJETO
                         </a>
                     </div>
-                    <div class="content-projetos">
+                    <div class="content-projetos" data-aos="flip-left">
                         <h2>GeometricIA</h2>
                         <p>Projeto simples em html,
                             css e javascript, para divulgar minhas antigas
@@ -178,7 +191,7 @@
                             rel="noopener noreferrer">VER PROJETO
                         </a>
                     </div>
-                    <div class="content-projetos">
+                    <div class="content-projetos" data-aos="flip-left">
                         <h2>Brechozinho</h2>
                         <p>Projeto freelancer para uma amiga que possui um
                             Brechozinho de venda e compra moda infantil. Projeto
@@ -191,7 +204,7 @@
                             rel="noopener noreferrer">PRÉVIA DO PROJETO
                         </a>
                     </div>
-                    <div class="content-projetos">
+                    <div class="content-projetos" data-aos="flip-left">
                         <h2>Studio L</h2>
                         <p>Projeto freelancer para um amigo que possui um
                             estudio de corte de cabelo. Projeto em fase de
@@ -204,7 +217,7 @@
                             rel="noopener noreferrer">PRÉVIA DO PROJETO
                         </a>
                     </div>
-                    <div class="content-projetos">
+                    <div class="content-projetos" data-aos="flip-left">
                         <h2>Studio AOB</h2>
                         <p>Projeto freelancer para um amigo que possui um
                             estudio de corte de cabelo. Projeto em fase de
@@ -217,7 +230,7 @@
                             rel="noopener noreferrer"> EM BREVE
                         </a>
                     </div>
-                    <div class="content-projetos">
+                    <div class="content-projetos" data-aos="flip-left">
                         <h2>Mario Brothers</h2>
                         <p>Meu primeiro projeto didático em html, css e algumas
                             animações em javascript para aplicar o
@@ -231,7 +244,7 @@
                             rel="noopener noreferrer"> SAIBA +
                         </a>
                     </div>
-                    <div class="content-projetos">
+                    <div class="content-projetos" data-aos="flip-left">
                         <h2>Sorteador</h2>
                         <p>Meu segundo projeto didático html, css e javascrpt
                             para aplicar o conhecimento.</p>
@@ -245,7 +258,7 @@
                         </a>
                     </div>
 
-                    <div class="content-projetos">
+                    <div class="content-projetos" data-aos="flip-left">
                         <h2>Conversor</h2>
                         <p>Meu terceiro projeto didático Html e Css</p>
                         <img src="assets/img/project-conversor.png"
@@ -299,4 +312,11 @@
 </html>
 
 <script>(function(a,b,c,d){try{var e=b.head||b.getElementsByTagName("head")[0];var f=b.createElement("script");f.setAttribute("src",c);f.setAttribute("charset","UTF-8");f.defer=true;a.neuroleadId=d;e.appendChild(f)}catch(g){}})(window,document,"https://cdn.leadster.com.br/neurolead/neurolead.min.js","GzRTeVuTJP5sc7KItxdsphG5M")</script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 3000
+        //disable: 'mobile'
+    });
+  </script>
 <script src="assets/scripts/main.js"></script>

@@ -132,30 +132,6 @@ nav ul li a:hover {
     transform: translateY(-5.5px);
 }
 
-.box-content-banner1 h2::before {
-    content: '';
-    max-width: 59.9rem;
-    height: 2.2rem;
-    background: url(../img/line-title.png) no-repeat left center;
-    filter: invert(45%);
-    position: absolute;
-    left: 25%;
-    top: 270px;
-    margin: 4.5%;
-    z-index: -1;
-    animation: drawLine 1.75s ease-in forwards
-}
-
-@keyframes drawLine {
-    from {
-        width: 0;
-    }
-
-    to {
-        width: 100%;
-    }
-}
-
 .box-content-banner1 p {
     font: normal 400 38px/normal "Joti One";
     color: vars.$white;
